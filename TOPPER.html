@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Topper Surprise 😎</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Comic Sans MS, cursive;
+            margin-top: 100px;
+            background: linear-gradient(135deg, #ffd6e8, #d6f0ff);
+        }
+
+        h1 {
+            font-size: 40px;
+        }
+
+        button {
+            padding: 12px 25px;
+            font-size: 18px;
+            cursor: pointer;
+            margin: 15px;
+            border-radius: 12px;
+            border: none;
+            background-color: #ff4da6;
+            color: white;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background-color: #ff1a8c;
+            transform: scale(1.1);
+        }
+
+        #message {
+            font-size: 26px;
+            margin-top: 20px;
+        }
+
+        #flash {
+            font-size: 100px;
+            margin-top: 20px;
+            display: none;
+        }
+
+        .flash-effect {
+            animation: flash 0.3s infinite;
+        }
+
+        @keyframes flash {
+            0% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0; transform: scale(1.3); }
+            100% { opacity: 1; transform: scale(1); }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>🎓 My Sister is Topper 😎🔥</h1>
+
+    <button onclick="openFirstGift()">🎁 Open Gift</button>
+
+    <div id="message"></div>
+    <div id="secondGift"></div>
+    <div id="thirdGift"></div>
+    <div id="flash">🖕</div>
+
+    <script>
+        function openFirstGift() {
+            document.getElementById("message").innerHTML =
+                "OMG 😱 You are too smart for this planet! 🌍✨";
+            document.getElementById("secondGift").innerHTML =
+                '<button onclick="openSecondGift()">🎁 Open Secret Gift</button>';
+        }
+
+        function openSecondGift() {
+            document.getElementById("message").innerHTML =
+                "Wait... one more SUPER SPECIAL gift 😏";
+            document.getElementById("thirdGift").innerHTML =
+                '<button onclick="openThirdGift()">🎁 Final Gift</button>';
+        }
+
+        function openThirdGift() {
+            const flash = document.getElementById("flash");
+            flash.style.display = "block";
+            flash.classList.add("flash-effect");
+        }
+    </script>
+
+</body>
+</html
